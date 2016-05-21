@@ -1,10 +1,11 @@
-angular.module('food').controller('donorController', [$scope]){
+angular.module('food')
+.controller('donorController', function($scope) {
   $scope.donate = function () {
     $http({
       method: 'POST',
       url: '/createItem',
       data: {
-        itemname: $scope.,
+        itemname: $scope.itemname,
         organizationName: $scope.organizationName,
         address: $scope.address,
         website: $scope.website,
@@ -14,7 +15,7 @@ angular.module('food').controller('donorController', [$scope]){
         userLastName: $scope.userLastName,
       }
     }).then(function (result) {
-      console.log(result)
+      console.log(result);
     });
-  }
+  };
 });
