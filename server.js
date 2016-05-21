@@ -5,6 +5,9 @@ var app = express();
 
 var PORT = 3000;
 
+app.use(express.static('app'));
+app.use(express.static('public'));
+
 app.use('/', routes);
 
 app.listen(PORT, function () {

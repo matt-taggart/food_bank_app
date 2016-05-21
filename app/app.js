@@ -13,4 +13,4 @@ angular.module('food', ['ui.router'])
       requireBase: false
     });
 
-  }
+  });
