@@ -1,7 +1,7 @@
 var mongoose = require("mongoose");
 if(process.env.NODE_ENV === 'production') {
   // HEROKU DB
-  mongoose.connect(process.env.MONGOLAB_URI);
+  mongoose.connect(process.env.MONGODB_URI);
 }
 else {
   // LOCAL DB
