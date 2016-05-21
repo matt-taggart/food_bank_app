@@ -1,22 +1,15 @@
 var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
-var QuestionSchema = new Schema({
+var ListingSchema = new Schema({
 	//id is so can you view all teh answers from a user
 	//without indentifying the user
-	randomId:String,
-	_survey: {
-		type:Schema.Types.ObjectId,
-		ref: "Survey"
-	},
-	text:String,
-	type:{type:String, default:"input"},
-	lines:{type:Number, default:1},
-	options:[],
-	//if radio or checkbox
-	_answer:[{type:Schema.Types.ObjectId,
-						ref:"Answer"}]
+	date:Date.now,
+	_item:[{type:Schema.Types.ObjectId,
+						ref:"Item"}],
+	_place:[{type:Schema.Types.ObjectId,
+						ref:"Place"}]
 });
 
-var Question = mongoose.model("Question", QuestionSchema);
+var Listing = mongoose.model("Listing", QuestionSchema);
 module.exports=Question
