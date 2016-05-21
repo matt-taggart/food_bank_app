@@ -35,7 +35,7 @@ module.exports = function(passport) {
         });
 
       } else {
-        return done(null, false, req.flash('registerMessage', 'Username already exists.'));
+        return done(null, false);
       }
 
     });

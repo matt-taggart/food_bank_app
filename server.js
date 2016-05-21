@@ -3,9 +3,9 @@ var express = require('express');
 var app = express();
 var session = require('express-session');
 var routes = require('./routes/index.js');
+require('./config/passport.js');
 
 var PORT = 3000;
-
 var logger = require("morgan");
 var bodyParser = require("body-parser")
 var mongoose = require('mongoose');
@@ -19,6 +19,9 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 require("./server/models/db");
+
+app.use(express.static('app'));
+app.use(express.static('public'));
 
 app.use(session({
   secret: 'keyboard cat',
