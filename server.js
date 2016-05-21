@@ -3,6 +3,7 @@ var express = require('express');
 var app = express();
 var session = require('express-session');
 var routes = require('./routes/index.js');
+require('./config/passport.js');
 
 var PORT = 3000;
 
