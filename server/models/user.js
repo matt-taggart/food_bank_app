@@ -8,11 +8,11 @@ var UserSchema = new Schema({
 		type:Schema.Types.ObjectId,
 		ref: "Place"
 	},
-	firstName:String, 
+	firstName:String,
 	lastName:String,
 	email:String,
 	password:String,
 });
 
 var User = mongoose.model("User", UserSchema);
-module.exports=User
+module.exports=User;
