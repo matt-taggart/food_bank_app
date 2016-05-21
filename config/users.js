@@ -1,7 +1,7 @@
 module.exports = function() {
   var _ = require('lodash');
   var faker = require('faker');
-  return _.times(100, function() {
+  return _.times(25, function() {
     return {
       place: faker.company.companyName(),
       address: faker.address.streetAddress(),
