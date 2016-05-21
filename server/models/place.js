@@ -9,7 +9,9 @@ var PlaceSchema = new Schema({
 	city:String,
 	zipCode:Number,
 	phoneNumber:String,
-	aboutUs:String,
+	aboutUs:String,	
+	latitude:Number,
+	longitude:Number,
 	imgUrl:String,
 	_listing:[{type:Schema.Types.ObjectId,
 						ref:"Listing"}]
