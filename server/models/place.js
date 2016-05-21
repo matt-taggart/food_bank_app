@@ -13,8 +13,8 @@ var PlaceSchema = new Schema({
 	latitude:Number,
 	longitude:Number,
 	imgUrl:String,
-	_listing:[{type:Schema.Types.ObjectId,
-						ref:"Listing"}]
+	_item:[{type:Schema.Types.ObjectId,
+						ref:"items"}]
 });
 
 var Place = mongoose.model("Place", QuestionSchema);

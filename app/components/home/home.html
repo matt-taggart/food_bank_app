@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/splashPage.css">
+</head>
+
+<body>
+
+    
+  <div class="form-box col-xs-12 col-sm-10 col-sm-offset-2 col-md-6 col-md-offset-3">
+    <div class="form-top">
+      <h2>Donate an Item</h2>
+      <h4 class="register-span"></h4>
+    </div>
+    <div class="form-bottom">
+      <form method="post" action="/register">
+        <div>
+          <label for="item">Name</label>
+          <input required type="text" class="form-control" name="organizationName">
+          <span class="help-block"></span>
+        </div>
+        <div> 
+          <label for="address">Unit</label>
+          <input required type="text" class="form-control" name="address">
+          <span class="help-block"></span>
+        </div>
+        <div>
+          <label for="website">Category</label>
+          <input required type="text" class="form-control" name="website">
+          <span class="help-block"></span>
+        </div>
+
+        <div>
+          <label for="userFirstName">Price per Unit</label>
+          <input required type="text" class="form-control" name="userFirstName">
+          <span class="help-block"></span>
+        </div>
+        <div>
+          <label for="username">Number of Units</label>
+          <input required type="text" class="form-control" name="userLastName">
+          <span class="help-block"></span>
+        </div>
+   
+        <div id="loginErrorMsg" class="alert alert-error hide">Wrong username or password</div>
+        <button type="submit" class="btn btn-warning btn-block">Add</button>
+      </form>
+    </div>
+  </div>
