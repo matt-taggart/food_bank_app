@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var Item = require('../server/models/item.js'); //Item Schema
+var Item = require('../server/models/item.js');
 var Place = require('../server/models/place.js');
 var _ = require('lodash');
 var faker = require('faker');
@@ -36,6 +36,17 @@ router.get('/api/feed', function (req, res) {
   Place.find({}, function(err, docs){
     res.json(docs);
   })
+
+router.post('/create-item', function(req, res) {
+
+  // var newItem = new Item(req.body);
+  // newItem.save(function(err, result) {
+  //   if(err) {
+  //     throw err;
+  //   } else {
+  //     console.log('content saved to DB');
+  //   }
+  // });
 });
 
 // router.get('/api/users/me',

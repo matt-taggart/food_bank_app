@@ -1,54 +1,56 @@
-<!DOCTYPE html>
-
-<html>
-
-<head>
-<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="../assets/css/splashPage.css">
-</head>
-
-<body>
-
-    
-  <div class="form-box col-xs-12 col-sm-10 col-sm-offset-2 col-md-6 col-md-offset-3">
-    <div class="form-top">
-      <h2>Donate an Item</h2>
-      <h4 class="register-span"></h4>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="#" data-toggle="modal" data-target="#loginModal">Login</a>
+        </li>
+        <li>
+          <a href="#" data-toggle="modal" data-target="#registerModal">Register</a>
+        </li>
+      </ul>
     </div>
-    <div class="form-bottom">
-      <form method="post" action="/register">
-        <div>
-          <label for="item">Name</label>
-          <input required type="text" class="form-control" name="organizationName">
-          <span class="help-block"></span>
-        </div>
-        <div> 
-          <label for="address">Unit</label>
-          <input required type="text" class="form-control" name="address">
-          <span class="help-block"></span>
-        </div>
-        <div>
-          <label for="website">Category</label>
-          <input required type="text" class="form-control" name="website">
-          <span class="help-block"></span>
-        </div>
+  </nav>
 
-        <div>
-          <label for="userFirstName">Price per Unit</label>
-          <input required type="text" class="form-control" name="userFirstName">
-          <span class="help-block"></span>
+  <div class="row">
+    <div class="col-xs-12 text-center">
+      <h1>Food Donor App</h1>
+    </div>
+  </div>
+
+<!-- REGISTER MODAL -->
+  <div id="registerModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Register</h4>
         </div>
-        <div>
-          <label for="username">Number of Units</label>
-          <input required type="text" class="form-control" name="userLastName">
-          <span class="help-block"></span>
+        <div class="modal-body">
+          <p>One fine body&hellip;</p>
         </div>
-   
-        <div id="loginErrorMsg" class="alert alert-error hide">Wrong username or password</div>
-        <button type="submit" class="btn btn-warning btn-block">Add</button>
-      </form>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- LOGIN MODAL -->
+  <div id="loginModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Login</h4>
+        </div>
+        <div class="modal-body">
+          <p>One fine body&hellip;</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
     </div>
   </div>
