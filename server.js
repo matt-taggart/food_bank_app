@@ -1,7 +1,10 @@
+require('dotenv').config({silent: true});
 var express = require('express');
 var app = express();
 
 var PORT = 3000;
+
+console.log(process.env.HOST);
 
 app.get('/', function(req, res) {
   res.send('Hello World');

@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/matt-taggart/food_bank_app#readme",
   "dependencies": {
-    "express": "^4.13.4"
+    "dotenv": "^2.0.0",
+    "express": "^4.13.4",
+    "faker": "^3.1.0",
+    "lodash": "^4.12.0"
   }
 }
