@@ -9,9 +9,7 @@ module.exports = function() {
       zipCode: faker.address.zipCode(),
       phoneNumber: faker.phone.phoneNumber(),
       aboutUs: faker.lorem.paragraph(),
-      imageUrl: faker.image.avatar(),
-      latitude: faker.address.latitude(),
-      longitude: faker.address.longitude()
+      imageUrl: faker.image.avatar()
     };
   });
 
