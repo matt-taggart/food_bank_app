@@ -7,9 +7,9 @@ var PlaceSchema = new Schema({
 	name:String,
 	address: String,
 	city:String,
-	zipCode:Number,
+	zipCode:String,
 	phoneNumber:String,
-	aboutUs:String,	
+	aboutUs:String,
 	latitude:Number,
 	longitude:Number,
 	imgUrl:String,
@@ -17,5 +17,5 @@ var PlaceSchema = new Schema({
 						ref:"Listing"}]
 });
 
-var Place = mongoose.model("Place", QuestionSchema);
+var Place = mongoose.model("Place", PlaceSchema);
 module.exports=Place;
