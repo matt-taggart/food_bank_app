@@ -5,10 +5,10 @@ var ItemSchema = new Schema({
 	//id is so can you view all teh answers from a user
 	//without indentifying the user
 	name:String,
-	quantity:String,
-	catagory:String,
-	worth:String,
-	catagory:String,
+	unit:String,
+	category:String,
+	pricePerUnit:Number,
+	amountOfUnits:Number,
 	_listing:{type:Schema.Types.ObjectId,
 						ref:"Listing"}
 });
