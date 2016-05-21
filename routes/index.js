@@ -32,6 +32,12 @@ router.get('/create-places', function(req, res) {
   });
 });
 
+router.get('/api/feed', function (req, res) {
+  Place.find({}, function(err, docs){
+    res.json(docs);
+  })
+});
+
 // router.get('/api/users/me',
 //   passport.authenticate('basic', { session: false }),
 //   function(req, res) {
