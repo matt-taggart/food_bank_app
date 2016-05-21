@@ -1,5 +1,6 @@
-angular.module('food').controller('FeedController', ['$scope',
-  function ($scope) {
-
+angular.module('food').controller('FeedController', ['$scope', '$http'
+  function ($scope, $http) {
+    $scope.feedInit = function(){
+    }
   }
 ]);
