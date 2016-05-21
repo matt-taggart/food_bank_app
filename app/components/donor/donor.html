@@ -7,35 +7,33 @@
       <h4 class="register-span"></h4>
     </div>
     <div class="form-bottom">
-      <form method="post">
+      <form ng-submit="donate()">
         <div>
           <label for="item">Name</label>
-          <input class="form-control" name="itemName">
+          <input class="form-control" ng-model="name">
           <span class="help-block"></span>
         </div>
         <div> 
           <label for="address">Unit</label>
-          <input required type="text" class="form-control" name="unit">
+          <input required type="text" class="form-control" ng-model="unit">
           <span class="help-block"></span>
         </div>
         <div>
           <label for="website">Category</label>
-          <input required type="text" class="form-control" name="category">
+          <input required type="text" class="form-control" ng-model="category">
           <span class="help-block"></span>
         </div>
 
         <div>
           <label for="userFirstName">Price per Unit</label>
-          <input required type="text" class="form-control" name="pricePerUnit">
+          <input required type="text" class="form-control" ng-model="pricePerUnit">
           <span class="help-block"></span>
         </div>
         <div>
           <label for="username">Number of Units</label>
-          <input required type="text" class="form-control" name="numberofUnits">
+          <input required type="text" class="form-control" ng-model="amountofUnits">
           <span class="help-block"></span>
         </div>
-   
-        <div id="loginErrorMsg" class="alert alert-error hide">Wrong username or password</div>
         <button type="submit" class="btn btn-warning btn-block">Add</button>
       </form>
     </div>
