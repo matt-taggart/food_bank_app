@@ -5,11 +5,6 @@ var Place = require('../server/models/place.js');
 var _ = require('lodash');
 var faker = require('faker');
 
-
-router.get('/', function(req, res) {
-  res.sendFile(process.cwd() + '/index.html');
-});
-
 router.get('/create-places', function(req, res) {
   _.times(50, function() {
     var newPlace = new Place({
@@ -48,6 +43,10 @@ router.post('/create-item', function(req, res) {
   //     console.log('content saved to DB');
   //   }
   // });
+});
+
+router.get('*', function(req, res) {
+  res.sendFile(process.cwd() + '/index.html');
 });
 
 // router.get('/api/users/me',

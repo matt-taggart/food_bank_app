@@ -1,12 +1,10 @@
-angular.module('food').controller('feedController', ['$scope', '$http'
+angular.module('food').controller('feedController', ['$scope', '$http',
   function ($scope, $http) {
-    $scope.places = function(){
-        alert("hi");
+    $scope.feedInit = function(){
         $http.get('/api/feed').then(function(res) {
-            console.log(res);
+            $scope.places = res.data;
+            console.log(res.data);
         })
     }
   }
-
-  $scope.places();
 ]);

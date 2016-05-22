@@ -5,7 +5,7 @@ angular.module('food', ['ui.router'])
     $stateProvider
       .state('home', {
         url: '/home',
-        templateUrl: '/components/home/home.html'
+        templateUrl: '/components/home/home.html',
       }).state('feed', {
         url:'/feed',
         templateUrl: '/components/feed/feed.html'
