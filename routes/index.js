@@ -27,6 +27,12 @@ router.get('/create-places', function(req, res) {
   });
 });
 
+router.get('/api/feed', function (req, res) {
+  Place.find({}).populate("_item").exec(function(err, docs){
+    res.json(docs);
+  })
+});
+
 router.get('/findItem', function(req, res) {
   Item.find().exec().then(function(result) {
     res.json(result);
@@ -42,7 +48,6 @@ router.post('/createItem', function(req, res) {
       console.log('content saved to DB');
     }
   });
-
 });
 
 router.get('*', function(req, res) {
