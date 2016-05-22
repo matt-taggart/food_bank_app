@@ -40,6 +40,7 @@ router.get('/findItem', function(req, res) {
 });
 
 router.post('/createItem', function(req, res) {
+  console.log(req.body);
   var newItem = new Item(req.body);
   newItem.save(function(err, result) {
     if(err) {
