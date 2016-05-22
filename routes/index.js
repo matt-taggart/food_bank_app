@@ -36,6 +36,7 @@ router.get('/api/feed', function (req, res) {
   Place.find({}, function(err, docs){
     res.json(docs);
   })
+});
 
 router.post('/create-item', function(req, res) {
 
