@@ -1,12 +1,12 @@
 angular.module('food')
   .controller('donorController', function($scope, $http){
+
     $http({
       method: 'GET',
       url: '/findItem',
     }).then(function(result) {
       $scope.items = result.data;
     });
-
 
     $scope.donate = function (){
       $http({
@@ -21,6 +21,13 @@ angular.module('food')
                         }
       }).then(function (result) {
         console.log(result);
+      });
+
+      $http({
+        method: 'GET',
+        url: '/findItem',
+      }).then(function(result) {
+        $scope.items = result.data;
       });
     };
 });
