@@ -17,7 +17,7 @@ angular.module('food')
           unit: $scope.unit,
           category: $scope.category,
           pricePerUnit: $scope.pricePerUnit,
-          amountofUnits: $scope.amountofUnits,
+          amountOfUnits: $scope.amountOfUnits,
                         }
       }).then(function (result) {
         console.log(result);
