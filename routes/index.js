@@ -5,11 +5,6 @@ var Place = require('../server/models/place.js');
 var _ = require('lodash');
 var faker = require('faker');
 
-
-router.get('*', function(req, res) {
-  res.sendFile(process.cwd() + '/index.html');
-});
-
 router.get('/create-places', function(req, res) {
   _.times(50, function() {
     var newPlace = new Place({
@@ -32,17 +27,26 @@ router.get('/create-places', function(req, res) {
   });
 });
 
-router.post('/create-item', function(req, res) {
+router.get('/findItem', function(req, res) {
+  Item.find().exec().then(function(result) {
+    res.json(result);
+  });
+});
 
-  // var newItem = new Item(req.body);
-  // newItem.save(function(err, result) {
-  //   if(err) {
-  //     throw err;
-  //   } else {
-  //     console.log('content saved to DB');
-  //   }
-  // });
+router.post('/createItem', function(req, res) {
+  var newItem = new Item(req.body);
+  newItem.save(function(err, result) {
+    if(err) {
+      throw err;
+    } else {
+      console.log('content saved to DB');
+    }
+  });
 
+});
+
+router.get('*', function(req, res) {
+  res.sendFile(process.cwd() + '/index.html');
 });
 
 // router.get('/api/users/me',
