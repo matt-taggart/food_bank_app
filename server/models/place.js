@@ -14,7 +14,7 @@ var PlaceSchema = new Schema({
 	longitude:Number,
 	imgUrl:String,
 	_item:[{type:Schema.Types.ObjectId,
-						ref:"items"}]
+						ref:"Item"}]
 });
 
 var Place = mongoose.model("Place", PlaceSchema);

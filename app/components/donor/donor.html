@@ -38,4 +38,27 @@
         <button type="submit" class="btn btn-warning btn-block">Add</button>
       </form>
     </div>
-  </div>
+    <br />
+    <br />
+    <div class="row">
+      <div class="col-xs-12">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Price per Unit</th>
+              <th>Category</th>
+              <th>Unit</th>
+              <th>Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="item in items">
+              <td>{{ item.pricePerUnit }}</td>
+              <td>{{ item.category }}</td>
+              <td>{{ item.unit }}</td>
+              <td>{{ item.name }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>

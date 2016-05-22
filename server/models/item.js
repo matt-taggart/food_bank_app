@@ -10,7 +10,7 @@ var ItemSchema = new Schema({
 	pricePerUnit:Number,
 	amountOfUnits:Number,
 	_place:{type:Schema.Types.ObjectId,
-						ref:"place"}
+						ref:"Place"}
 });
 
 var Item = mongoose.model("Item", ItemSchema);

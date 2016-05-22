@@ -28,21 +28,26 @@ router.get('/create-places', function(req, res) {
 });
 
 router.get('/api/feed', function (req, res) {
-  Place.find({}, function(err, docs){
+  Place.find({}).populate("_item").exec(function(err, docs){
     res.json(docs);
   })
 });
 
-router.post('/create-item', function(req, res) {
+router.get('/findItem', function(req, res) {
+  Item.find().exec().then(function(result) {
+    res.json(result);
+  });
+});
 
-  // var newItem = new Item(req.body);
-  // newItem.save(function(err, result) {
-  //   if(err) {
-  //     throw err;
-  //   } else {
-  //     console.log('content saved to DB');
-  //   }
-  // });
+router.post('/createItem', function(req, res) {
+  var newItem = new Item(req.body);
+  newItem.save(function(err, result) {
+    if(err) {
+      throw err;
+    } else {
+      console.log('content saved to DB');
+    }
+  });
 });
 
 router.get('*', function(req, res) {
