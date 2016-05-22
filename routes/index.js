@@ -32,16 +32,15 @@ router.get('/create-places', function(req, res) {
   });
 });
 
-router.post('/create-item', function(req, res) {
-
-  // var newItem = new Item(req.body);
-  // newItem.save(function(err, result) {
-  //   if(err) {
-  //     throw err;
-  //   } else {
-  //     console.log('content saved to DB');
-  //   }
-  // });
+router.post('/createItem', function(req, res) {
+  var newItem = new Item(req.body);
+  newItem.save(function(err, result) {
+    if(err) {
+      throw err;
+    } else {
+      console.log('content saved to DB');
+    }
+  });
 
 });
 
