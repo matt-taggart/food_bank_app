@@ -9,6 +9,9 @@ angular.module('food', ['ui.router'])
       }).state('feed', {
         url:'/feed',
         templateUrl: '/components/feed/feed.html'
+      }).state('donor', {
+        url:'/donor',
+        templateUrl: '/components/donor/donor.html'
       });
 
     $locationProvider.html5Mode({
