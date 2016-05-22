@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({
 
 app.use(bodyParser.json());
 
-// require("./server/models/db");
+require("./server/models/db");
 
 app.use(express.static('app'));
 app.use(express.static('public'));
